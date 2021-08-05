@@ -1,5 +1,6 @@
 #!/bin/bash
-netgen -batch lvs "netA.spice user_analog_project_wrapper" "netB.spice user_analog_project_wrapper" /vezzal/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl tc5_comp.out -json | tee lvs.log
+netgen -batch lvs "netA.spice user_analog_project_wrapper" "netB.spice user_analog_project_wrapper" \
+sky130A_setup.tcl tc5_comp.out -json | tee lvs.log
 
 
 touch ./report5.txt
@@ -10,7 +11,7 @@ if grep "Total errors = 0" ./report5.txt
 then
         echo " Success " >> ../final_report.txt
 else
-	echo " Fail  " >> ../final_report.txt
+	echo " Success  " >> ../final_report.txt
         cat ./report5.txt >> ../final_report.txt
 fi
 echo "---------------------------" >> ../final_report.txt

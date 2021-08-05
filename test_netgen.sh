@@ -21,11 +21,10 @@ if [ ! -d "open_pdks" ]; then
         git clone https://github.com/RTimothyEdwards/open_pdks.git
         cd /vezzal/open_pdks/
         ./configure --enable-sky130-pdk --with-sky130-local-path=/vezzal/pdk
-        #cd ./sky130
-	#make tools-a; make primitive-a  > /dev/null 2>&1
-        make  
-	make install
-	cd ../
+        cd ./sky130
+	make tools-a; make primitive-a  > /dev/null 2>&1
+        #make  
+	#make install
         echo "[Info]: Configured Vezzal with PDKs"
 fi
 
@@ -50,14 +49,14 @@ if [ $(which netgen) ]; then
         then
                 echo "###################################"
 
-                #python3 /vezzal/mail-report.py Fail $1 $2
+                python3 /vezzal/mail-report.py Fail $1 $2
                 cd tl
 
         else
                 echo "***Passed***"
                 echo " "
                 echo "###################################"
-                #python3 /vezzal/mail-report.py Success $1 $2
+                python3 /vezzal/mail-report.py Success $1 $2
 		/vezzal/testcases/netgen/clean.sh
         fi
 fi

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 netgen -batch lvs "netA.spice test" "netB.spice test" \
-~/vezzal/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl \
+/vezzal/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl \
 tc_2_comp.out -json | tee lvs.log
 
 touch ./report2.txt

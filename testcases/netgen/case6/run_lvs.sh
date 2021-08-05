@@ -1,7 +1,7 @@
 #!/bin/sh
 export MAGIC_EXT_USE_GDS=1
 netgen -batch lvs "netA.spice digital_pll" "netB.v digital_pll" \
-/vezzal/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl \
+sky130A_setup.tcl \
 tc_6_comp.out -json | tee lvs.log
 touch ./report6.txt
 echo " "

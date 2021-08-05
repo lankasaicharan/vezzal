@@ -1,6 +1,6 @@
 #!/bin/sh
 netgen -batch lvs netA.spice netB.spice \
-/usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl \
+/vezzal/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl \
 tc_3_comp.out -json -blackbox | tee lvs.log
 
 touch ./report3.txt
