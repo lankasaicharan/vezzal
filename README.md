@@ -9,7 +9,9 @@ Vezzal is a CI tool for Netgen and Magic (yet to be supported). This tool is a d
 * [**Vezzal Tool**](https://github.com/lankasaicharan/vezzal/#vezzal-tool)
 
   > [**Directory Structure**](https://github.com/lankasaicharan/vezzal#directory-structure)
+  
   > [**Scripts**](https://github.com/lankasaicharan/vezzal#scripts)
+  
   > [**Testcases**](https://github.com/lankasaicharan/vezzal#testcases)
 
 * [**Github Actions**](https://github.com/lankasaicharan/vezzal#github-actions)
@@ -26,7 +28,7 @@ Vezzal is a CI tool for Netgen and Magic (yet to be supported). This tool is a d
 
 Constant development of tools often breaks something internally which can lead to other issues. Hence there is a need to test the tool for its previous supporting features. But the tool needs an environment to work and good test cases to test the features. That's where Vezzal comes in. The main goal of Vezzal is to provide the tool an environment supporting all dependencies like compilers, libraries etc., and a test cases database which could test the tool its core and supporting features with very few inputs from the user. It can also be used as a standalone environment to work with and exercise opensource EDA tools by using the test cases database as examples to practice. However, this feature needs few modification to the current version but a good understanding of Vezzal can help you to achieve it. In addition to the main goal, authors of Vezzal tries to keep everything simple by following the KISS principle (KEEP IT SIMPLE, STUPID) to avoid any kind of usage restrictions, giving complete freedom to mould Vezzal according to the needs of the user. The CI feature offered by Vezzal couldn't be possible without the docker technology, which is also employed by the OpenLANE, and Github Actions.
 
------------------------------;
+
 
 ## Vezzal Tool
 
@@ -36,7 +38,7 @@ Vezzal is in the form of docker image (as of now) which has the environment to s
 
 ### **Directory Structure**
 
-The directory named *vezzal* serves as the *home* directory to the tool. It consists of two main directories - *testcases* and *tools*. Tool dependent testcases are stored under the *testcases* directory. All tool installations happen in the *tools* directory. There are two scripts - <test_netgen.sh> and <mail-report.py> which tests the netgen tool and mails the final result to provided mail addresses, respectively.
+The directory named *vezzal* serves as the *home* directory to the tool. It consists of two main directories - *testcases* and *tools*. Tool dependent testcases are stored under the *testcases* directory. All tool installations happen in the *tools* directory. There are two scripts - *test_netgen.sh* and *mail-report.py* which tests the netgen tool and mails the final result to provided mail addresses, respectively.
 
 *Please note that currently **Vezzal** is configured for Netgen tool, hence the mailing python script is configured to Netgen related directory.*  
 
@@ -48,10 +50,10 @@ Details related to testcases are mentioned in furthur sections.
 
 ### **Scripts**
 
-**Vezzal** contains shell scripts which are written for a particular tool, mainly to support testing. Scripts can be identified in two categories. One master script which performs the testing of the tool and many test case related scripts which does the actual testing by communicating with the tool in various fashions. Consider the example of Netgen. There is a master script called <test_netgen.sh> which does the testing of the tool by interacting with various shell scripts present in the each test case directory. (This will be invoked directly with the docker image while performing CI through Github actions.)
+**Vezzal** contains shell scripts which are written for a particular tool, mainly to support testing. Scripts can be identified in two categories. One master script which performs the testing of the tool and many test case related scripts which does the actual testing by communicating with the tool in various fashions. Consider the example of Netgen. There is a master script called *test_netgen.sh* which does the testing of the tool by interacting with various shell scripts present in the each test case directory. (This will be invoked directly with the docker image while performing CI through Github actions.)
 There are two arguments to this shell script - list of mail IDs and the passcode for *vezzal mail ID*. Both of them are used for mailing purposes (as you could see that already).
 
-Each testcase directory contains custom shell script which invokes the tool and generates reports accordingly. There are other scripts in the tool-dependent testcases directory such as <count_lvs.py> in the case of Netgen, which supports the counting of errors from the tool output(Thanks to Tim Edwards for providing this).
+Each testcase directory contains custom shell script which invokes the tool and generates reports accordingly. There are other scripts in the tool-dependent testcases directory such as *count_lvs.py* in the case of Netgen, which supports the counting of errors from the tool output(Thanks to Tim Edwards for providing this).
 
 There is a python script in the *vezzal* directory (home) which mails the final result to the mails IDs mentioned during the launching of testing operation.
 
@@ -67,13 +69,17 @@ Below is the list of test cases for Netgen which are tested in Vezzal -
 | Testcases                          | Feature                                                | Result |
 |------------------------------------|--------------------------------------------------------|--------|
 | testcase1 - netA.spice netB.spice  |basic matching                                          |Success |
-| testcase2 - netA.spice netB.spice  |introducing **top cell name* along with the netlist file|Success |
+| testcase2 - netA.spice netB.spice  |introducing **top cell name** along with the netlist file|Success |
 | testcase3 - netA.spice netB.spice  |adding *blackbox* option while invoking the tool        |Success |
 | testcase4 - netA.spice netB.spice  |adding *permute* to the setup file and testing the swapping of pins |Success |
 | testcase5 - netA.spice netB.spice  |testing the general analog spice netlists               |Pins mismatching |
 | testcase6 - netA.spice netB.v      |enable variable MAG_EXT_GDS (set to 1) before running netgen         |Success  |
 | testcase7 - netA.spice netB.spice  |should able to find the properties difference between magic extracted spice netlist and xschem extracted spice netlist         |   Property errors = 6     |
-----------------------------;
+
+
+#### Magic
+
+
 
 ## Github Actions
 
@@ -83,10 +89,11 @@ Github Actions makes things easy to automate worflows.Upon various events, the w
 
 **Vezzal** uses Github actions to perform CI to tools. The *.yml* file is stored in *.github/workflows* directory in the Github repo. This file contains the following main steps:
  >Pull the docker image
+ 
  >Start the container for the image
+ 
  >Run the appropriate script to test the tool
 
----------------------------------;
 
 ## Continuos Integration workflow using Github actions and Vezzal
 
