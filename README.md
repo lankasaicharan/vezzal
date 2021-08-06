@@ -1,14 +1,14 @@
 # Vezzal
 
-Vezzal is a CI tool for Netgen and Magic (yet to be supported). This tool is a docker image which has an environment containing all tool dependencies such as libraries and PDK. The latest version of the specific tool is tested against a pre-built test cases database covering core features of that tool and generates a report which can be retrieved using the Vezzal's built-in mailing feature. It takes the advantage of Github actions and the docker technology for continuos integration of tools that are already stored in the github repo.
+Vezzal is a CI tool for Netgen and Magic (yet to be supported). This tool is a docker image which has an environment containing all tool dependencies such as libraries and PDK. The latest version of the specific tool is tested against a pre-built test cases database covering core features of that tool and generates a report which can be retrieved using the Vezzal's built-in mailing feature. It takes the advantage of Github actions and the docker technology for continuous integration of tools that are already stored in the github repo.
 
 ## Table of Contents
 
-* [**Philosophy**](https://github.com/lankasaicharan/vezzal#philosophy)
+* [**Philosophy**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#philosophy)
 
-* [**Vezzal Tool**](https://github.com/lankasaicharan/vezzal/#vezzal-tool)
+* [**Vezzal Tool**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#vezzal-tool)
 
-  > [**Directory Structure**](https://github.com/lankasaicharan/vezzal#directory-structure)
+  > [**Directory Structure**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#directory-structure)
   
   > [**Scripts**](https://github.com/lankasaicharan/vezzal#scripts)
   
@@ -16,9 +16,11 @@ Vezzal is a CI tool for Netgen and Magic (yet to be supported). This tool is a d
 
 * [**Github Actions**](https://github.com/lankasaicharan/vezzal#github-actions)
 
-  > [**Building the .yml file**](https://github.com/lankasaicharan/vezzal#understanding-drc-in-magic-tool)
+  > [**Building the .yml file**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#building-the-yml-file)
 
-* [**Continuos Integration workflow using Github actions and Vezzal**](https://github.com/lankasaicharan/vezzal/blob/main/README.md#day-4-pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+* [**Continuous Integration workflow using Github actions and Vezzal**](https://github.com/lankasaicharan/vezzal/blob/main/README.md#day-4-pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+
+* [**Authors**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#authors)
 
 * [**Acknowledgments**](https://github.com/lankasaicharan/vezzal#acknowledgments)
 
@@ -95,9 +97,9 @@ Github Actions makes things easy to automate worflows.Upon various events, the w
  >Run the appropriate script to test the tool
 
 
-## Continuos Integration workflow using Github actions and Vezzal
+## Continuous Integration workflow using Github actions and Vezzal
 
-Continuos Integration workflow using Github actions and Vezzal is clearly explained in the below image. Upon push or pull to the tool's Github repo, the workflow gets triggered. First, the docker image of the Vezzal is pulled from the docker hub and a container is started for that image. Then, the tool related test script is executed.
+Continuous Integration workflow using Github actions and Vezzal is clearly explained in the below image. Upon push or pull to the tool's Github repo, the workflow gets triggered. First, the docker image of the Vezzal is pulled from the docker hub and a container is started for that image. Then, the tool related test script is executed.
 The updated tool's Github repo is pulled into the Vezzal environment and the tool is installed.Upon successful installation of the tool, related testcases are used to the test the tool which furthur generate two kinds of reports - local testcase report and a general tool report.Now the reports are analyzed and the result is mailed to the list of mail IDs mentioned along with the test script at the beginning.This is the end of CI.
 **It starts from the contributor updating the tool's Github repository and will end with a message sent to the contributor.**
 
