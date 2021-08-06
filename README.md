@@ -81,7 +81,7 @@ Below is the list of test cases for Netgen which are tested in Vezzal -
 
 #### Magic
 
-
+**To be updated**
 
 ## Github Actions
 
