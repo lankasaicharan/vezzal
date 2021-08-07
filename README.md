@@ -2,6 +2,11 @@
 
 ![Countinous Integration](https://github.com/lankasaicharan/vezzal/actions/workflows/codeql-analysis.yml/badge.svg)
 
+**CI is supported to below tools via Vezzal** - 
+* **Netgen -** ![](https://github.com/RtimothyEdwards/netgen/actions/workflows/main.yml/badge.svg)
+* **Magic -**  ![](https://github.com/RtimothyEdwards/magic/actions/workflows/main.yml/badge.svg)
+
+
 :warning: **This version of Vezzal needs code and testcases optimization.**
 
 Vezzal is a CI tool for Netgen and Magic (yet to be supported). This tool is a docker image which has an environment containing all tool dependencies such as libraries and PDK. The latest version of the specific tool is tested against a pre-built test cases database covering core features of that tool and generates a report which can be retrieved using the Vezzal's built-in mailing feature. It takes the advantage of Github actions and the docker technology for continuous integration of tools that are already stored in the github repo.
