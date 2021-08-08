@@ -36,9 +36,10 @@ cd netgen/
 ./configure && make > /dev/null 2>&1
 make install > /dev/null 2>&1
 if [ $(which netgen) ]; then
-        for i in {1..7}
+	cd /vezzal/testcases/netgen/
+        for i in $(find -type d -maxdepth 1)
         do
-                cd /vezzal/testcases/netgen/cas*$i
+                cd /vezzal/testcases/netgen/$i
                 ./run_lvs.sh
         done
         echo " "
@@ -59,5 +60,7 @@ if [ $(which netgen) ]; then
                 python3 /vezzal/mail-report.py Success $1 $2
 		/vezzal/testcases/netgen/clean.sh
         fi
+else
+	exit(1)
 fi
 
