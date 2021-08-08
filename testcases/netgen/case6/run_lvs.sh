@@ -1,4 +1,15 @@
 #!/bin/sh
+##########################################################################
+## Written by Sai Charan Lanka (Author of "Vezzal" tool)
+## GNU GENERAL PUBLIC LICENSE
+## Version 3, 29 June 2007
+##
+## Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+## Everyone is permitted to copy and distribute verbatim copies
+## of this license document, but changing it is not allowed.
+##
+##########################################################################
+
 export MAGIC_EXT_USE_GDS=1
 netgen -batch lvs "netA.spice digital_pll" "netB.v digital_pll" \
 sky130A_setup.tcl \
