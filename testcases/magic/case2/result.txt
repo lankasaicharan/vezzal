@@ -1,0 +1,2 @@
+Reading LEF data from file ../sky130_fd_sc_hd.lef.
+LEF read: Processed 68161 lines.
