@@ -10,6 +10,6 @@
 ##########################################################################
 
 
-rm ~/vezzal_main/vezzal/testcases/magic/case*/report*
-rm ~/vezzal_main/vezzal/testcases/magic/case*/output*
-rm ~/vezzal_main/vezzal/testcases/magic/*.txt
+rm /vezzal/testcases/magic/case*/report*
+rm /vezzal/testcases/magic/case*/output*
+rm /vezzal/testcases/magic/*.txt

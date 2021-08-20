@@ -19,44 +19,25 @@ echo "#######################################################################"
 
 echo ""
 
-if [ ! -d "open_pdks" ]; then
-        #configuring Vezzal with pdk
-        cd /vezzal/tools/
-        git clone https://github.com/RTimothyEdwards/magic.git > /dev/null 2>&1
-        cd ./magic
-        ./configure > /dev/null 2>&1
-        make
-        make install
-        cd /vezzal/
-        git clone https://github.com/RTimothyEdwards/open_pdks.git
-        cd /vezzal/open_pdks/
-        ./configure --enable-sky130-pdk --with-sky130-local-path=/vezzal/pdk
-        cd ./sky130
-	make tools-a; make primitive-a  > /dev/null 2>&1
-        #make  
-	#make install
-        echo "[Info]: Configured Vezzal with PDKs"
-fi
 
-
-#Configuring Vezzal with magic tool "
+#Configuring Vezzal with magic tool
 cd /vezzal/tools/
 git clone https://github.com/RTimothyEdwards/magic.git > /dev/null 2>&1
-cd netgen/
+cd magic/
 ./configure && make > /dev/null 2>&1
 make install > /dev/null 2>&1
 if [ $(which magic) ]; then
 	cd /vezzal/testcases/magic/
         for i in $(find -type d -maxdepth 1)
         do
-                cd /vezzal/testcases/netgen/$i
+                cd /vezzal/testcases/magic/$i
                 ./run_magic.sh
         done
         echo " "
         echo " "
         echo "###################################"
 
-        if grep "Fail" /vezzal/testcases/netgen/final_report.txt
+        if grep "Fail" /vezzal/testcases/magic/final_report.txt
         then
                 echo "###################################"
 
@@ -71,6 +52,7 @@ if [ $(which magic) ]; then
 		/vezzal/testcases/magic/clean.sh
         fi
 else
-	exit(1)
+	echo "Magic tool installation failed"
+        cd td/
 fi
 
