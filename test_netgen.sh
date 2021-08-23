@@ -26,7 +26,7 @@ git clone https://github.com/RTimothyEdwards/netgen.git > /dev/null 2>&1
 cd netgen/
 ./configure && make > /dev/null 2>&1
 make install > /dev/null 2>&1
-if [ $(which netgen) ]; then
+if [ $(netgen --version) ]; then
 	cd /vezzal/testcases/netgen/
         for i in $(find -type d -maxdepth 1)
         do
@@ -41,14 +41,14 @@ if [ $(which netgen) ]; then
         then
                 echo "###################################"
 
-                #python3 /vezzal/mail-report.py Fail $1 $2
+                python3 /vezzal/mail-report.py Fail $1 $2
                 cd tl
 
         else
                 echo "***Passed***"
                 echo " "
                 echo "###################################"
-                #python3 /vezzal/mail-report.py Success $1 $2
+                python3 /vezzal/mail-report.py Success $1 $2
 		/vezzal/testcases/netgen/clean.sh
         fi
 else

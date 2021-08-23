@@ -21,12 +21,13 @@ echo ""
 
 
 #Configuring Vezzal with magic tool
+apt-get install tcsh > /dev/null 2>&1
 cd /vezzal/tools/
 git clone https://github.com/RTimothyEdwards/magic.git > /dev/null 2>&1
 cd magic/
 ./configure && make > /dev/null 2>&1
 make install > /dev/null 2>&1
-if [ $(which magic) ]; then
+if [ $(magic --version) ]; then
 	cd /vezzal/testcases/magic/
         for i in $(find -type d -maxdepth 1)
         do

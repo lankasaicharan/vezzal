@@ -1,0 +1,117 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1627202626
+<< checkpaint >>
+rect -1298 -1309 1490 1975
+<< nwell >>
+rect -38 332 230 704
+<< pwell >>
+rect 5 49 187 255
+rect 0 0 192 49
+<< psubdiff >>
+rect 31 205 161 229
+rect 65 171 127 205
+rect 31 122 161 171
+rect 65 88 127 122
+rect 31 64 161 88
+<< nsubdiff >>
+rect 31 578 161 602
+rect 65 544 127 578
+rect 31 492 161 544
+rect 65 458 127 492
+rect 31 434 161 458
+<< psubdiffcont >>
+rect 31 171 65 205
+rect 127 171 161 205
+rect 31 88 65 122
+rect 127 88 161 122
+<< nsubdiffcont >>
+rect 31 544 65 578
+rect 127 544 161 578
+rect 31 458 65 492
+rect 127 458 161 492
+<< locali >>
+rect 0 649 31 683
+rect 65 649 127 683
+rect 161 649 192 683
+rect 18 578 174 613
+rect 18 544 31 578
+rect 65 544 127 578
+rect 18 538 127 544
+rect 161 538 174 578
+rect 18 492 174 538
+rect 18 458 31 492
+rect 65 458 127 492
+rect 161 458 174 492
+rect 18 442 174 458
+rect 18 205 174 221
+rect 18 171 31 205
+rect 65 171 127 205
+rect 161 171 174 205
+rect 18 128 174 171
+rect 18 88 31 128
+rect 65 122 174 128
+rect 65 88 127 122
+rect 161 88 174 122
+rect 18 53 174 88
+rect 0 -17 31 17
+rect 65 -17 127 17
+rect 161 -17 192 17
+<< viali >>
+rect 31 649 65 683
+rect 127 649 161 683
+rect 127 544 161 572
+rect 127 538 161 544
+rect 31 122 65 128
+rect 31 94 65 122
+rect 31 -17 65 17
+rect 127 -17 161 17
+<< metal1 >>
+rect 0 683 192 715
+rect 0 649 31 683
+rect 65 649 127 683
+rect 161 649 192 683
+rect 0 617 192 649
+rect 112 572 176 581
+rect 112 538 127 572
+rect 161 538 176 572
+rect 112 529 176 538
+rect 16 128 80 137
+rect 16 94 31 128
+rect 65 94 80 128
+rect 16 85 80 94
+rect 0 17 192 49
+rect 0 -17 31 17
+rect 65 -17 127 17
+rect 161 -17 192 17
+rect 0 -49 192 -17
+<< labels >>
+flabel pwell s 0 0 192 49 0 FreeSans 200 0 0 0 VNB
+port 7 nsew ground bidirectional
+flabel nwell s 0 617 192 666 0 FreeSans 200 0 0 0 VPB
+port 2 nsew power bidirectional
+rlabel comment s 0 0 0 0 4 tap_2
+flabel metal1 s 16 85 80 137 0 FreeSans 200 0 0 0 VNB
+port 7 nsew ground bidirectional
+flabel metal1 s 112 529 176 581 0 FreeSans 200 0 0 0 VPB
+port 2 nsew power bidirectional
+flabel metal1 s 0 617 192 666 0 FreeSans 200 0 0 0 VPWR
+port 3 nsew power bidirectional
+flabel metal1 s 0 0 192 49 0 FreeSans 200 0 0 0 VGND
+port 1 nsew ground bidirectional
+rlabel pwell s 0 0 192 49 1 VNB
+port 7 nsew ground bidirectional
+rlabel nwell s -38 332 230 704 1 VPB
+port 2 nsew power bidirectional
+rlabel metal1 s 112 529 176 581 1 VPB
+port 2 nsew power bidirectional
+<< properties >>
+string LEFsite unit
+string LEFclass CORE WELLTAP
+string FIXED_BBOX 0 0 192 666
+string GDS_FILE $PDKPATH/libs.ref/sky130_fd_sc_hs/gds/sky130_fd_sc_hs.gds
+string LEFsymmetry X Y
+string GDS_END 43562
+string GDS_START 40734
+<< end >>

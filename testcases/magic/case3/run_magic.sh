@@ -16,6 +16,7 @@ if grep "Success" ./report3.txt
 then
         echo " Success " >> ../final_report.txt
 else
+        echo "Fail" >> ../final_report.txt
         cat ./report3.txt >> ../final_report.txt
 fi
 echo "---------------------------" >> ../final_report.txt
