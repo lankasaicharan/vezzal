@@ -1,0 +1,46 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1627202642
+<< checkpaint >>
+rect -1298 -1309 1394 1975
+<< nwell >>
+rect -38 331 134 704
+<< pwell >>
+rect 0 0 96 49
+<< locali >>
+rect 0 649 31 683
+rect 65 649 96 683
+rect 0 -17 31 17
+rect 65 -17 96 17
+<< viali >>
+rect 31 649 65 683
+rect 31 -17 65 17
+<< metal1 >>
+rect 0 683 96 715
+rect 0 649 31 683
+rect 65 649 96 683
+rect 0 617 96 649
+rect 0 17 96 49
+rect 0 -17 31 17
+rect 65 -17 96 17
+rect 0 -49 96 -17
+<< labels >>
+flabel pwell s 0 0 96 49 0 FreeSans 200 0 0 0 VNB
+port 2 nsew ground bidirectional
+flabel nwell s 0 617 96 666 0 FreeSans 200 0 0 0 VPB
+port 3 nsew power bidirectional
+rlabel comment s 0 0 0 0 4 fill_1
+flabel metal1 s 0 617 96 666 0 FreeSans 200 0 0 0 VPWR
+port 4 nsew power bidirectional
+flabel metal1 s 0 0 96 49 0 FreeSans 200 0 0 0 VGND
+port 1 nsew ground bidirectional
+<< properties >>
+string LEFsite unit
+string LEFclass CORE SPACER
+string FIXED_BBOX 0 0 96 666
+string GDS_FILE $PDKPATH/libs.ref/sky130_fd_sc_lp/gds/sky130_fd_sc_lp.gds
+string LEFsymmetry X Y R90
+string GDS_END 4571172
+string GDS_START 4569816
+<< end >>

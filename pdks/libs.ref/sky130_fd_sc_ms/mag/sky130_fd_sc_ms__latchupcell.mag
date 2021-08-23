@@ -1,0 +1,25 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1627202635
+<< checkpaint >>
+rect -1298 -1309 1394 1975
+<< metal1 >>
+rect 0 617 96 666
+rect 0 0 96 49
+use sky130_fd_sc_ms__tapvpwrvgnd_1  sky130_fd_sc_ms__tapvpwrvgnd_1_0
+timestamp 1627202635
+transform 1 0 0 0 1 0
+box -38 -49 134 715
+<< labels >>
+flabel metal1 s 0 617 96 666 0 FreeSans 200 0 0 0 VPWR
+port 1 nsew power default
+flabel metal1 s 0 0 96 49 0 FreeSans 200 0 0 0 VGND
+port 2 nsew ground default
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX -38 -49 134 715
+string GDS_FILE $PDKPATH/libs.ref/sky130_fd_sc_ms/gds/sky130_fd_sc_ms.gds
+string GDS_END 3882604
+string GDS_START 3882290
+<< end >>

@@ -12,13 +12,15 @@ import smtplib,ssl
 import sys
 from email.message import EmailMessage
 
+info=sys.argv[1].split("-")
 msg=EmailMessage()
-msg['Subject']='Testing Result: '+sys.argv[1]
+msg['Subject']='Testing Result: '+info[1]
 msg['From']='vezzaltool@gmail.com'
 mails=sys.argv[2].split(",")
 msg['To']=mails
 
-with open('/vezzal/testcases/netgen/final_report.txt','r') as f:
+path="/vezzal/testcases/"+info[0]+"/final_report.txt"
+with open(path,'r') as f:
     file_data=f.read()
 
 msg.set_content(file_data)

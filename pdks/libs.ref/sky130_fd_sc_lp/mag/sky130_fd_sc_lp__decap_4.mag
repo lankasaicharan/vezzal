@@ -1,0 +1,190 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1627202642
+<< checkpaint >>
+rect -1298 -1309 1682 1975
+<< nwell >>
+rect -38 331 422 704
+<< pwell >>
+rect 16 49 378 273
+rect 0 0 384 49
+<< scnmos >>
+rect 95 47 295 247
+<< scpmoshvt >>
+rect 82 419 282 619
+<< ndiff >>
+rect 42 229 95 247
+rect 42 195 50 229
+rect 84 195 95 229
+rect 42 161 95 195
+rect 42 127 50 161
+rect 84 127 95 161
+rect 42 93 95 127
+rect 42 59 50 93
+rect 84 59 95 93
+rect 42 47 95 59
+rect 295 225 352 247
+rect 295 191 306 225
+rect 340 191 352 225
+rect 295 157 352 191
+rect 295 123 306 157
+rect 340 123 352 157
+rect 295 89 352 123
+rect 295 55 306 89
+rect 340 55 352 89
+rect 295 47 352 55
+<< pdiff >>
+rect 27 607 82 619
+rect 27 573 35 607
+rect 69 573 82 607
+rect 27 539 82 573
+rect 27 505 35 539
+rect 69 505 82 539
+rect 27 471 82 505
+rect 27 437 35 471
+rect 69 437 82 471
+rect 27 419 82 437
+rect 282 611 339 619
+rect 282 577 293 611
+rect 327 577 339 611
+rect 282 543 339 577
+rect 282 509 293 543
+rect 327 509 339 543
+rect 282 475 339 509
+rect 282 441 293 475
+rect 327 441 339 475
+rect 282 419 339 441
+<< ndiffc >>
+rect 50 195 84 229
+rect 50 127 84 161
+rect 50 59 84 93
+rect 306 191 340 225
+rect 306 123 340 157
+rect 306 55 340 89
+<< pdiffc >>
+rect 35 573 69 607
+rect 35 505 69 539
+rect 35 437 69 471
+rect 293 577 327 611
+rect 293 509 327 543
+rect 293 441 327 475
+<< poly >>
+rect 82 619 282 645
+rect 82 387 282 419
+rect 78 377 282 387
+rect 78 371 148 377
+rect 78 337 98 371
+rect 132 337 148 371
+rect 78 321 148 337
+rect 236 319 302 335
+rect 236 285 252 319
+rect 286 285 302 319
+rect 236 273 302 285
+rect 95 262 302 273
+rect 95 247 295 262
+rect 95 21 295 47
+<< polycont >>
+rect 98 337 132 371
+rect 252 285 286 319
+<< locali >>
+rect 0 649 31 683
+rect 65 649 127 683
+rect 161 649 223 683
+rect 257 649 319 683
+rect 353 649 384 683
+rect 19 607 85 649
+rect 19 573 35 607
+rect 69 573 85 607
+rect 19 539 85 573
+rect 19 505 35 539
+rect 69 505 85 539
+rect 19 471 85 505
+rect 19 437 35 471
+rect 69 437 85 471
+rect 19 421 85 437
+rect 277 611 343 649
+rect 277 577 293 611
+rect 327 577 343 611
+rect 277 543 343 577
+rect 277 509 293 543
+rect 327 509 343 543
+rect 277 475 343 509
+rect 277 441 293 475
+rect 327 441 343 475
+rect 34 371 148 387
+rect 34 337 98 371
+rect 132 337 148 371
+rect 34 321 148 337
+rect 277 335 343 441
+rect 34 229 100 321
+rect 236 319 343 335
+rect 236 285 252 319
+rect 286 285 343 319
+rect 236 268 343 285
+rect 34 195 50 229
+rect 84 195 100 229
+rect 34 161 100 195
+rect 34 127 50 161
+rect 84 127 100 161
+rect 34 93 100 127
+rect 34 59 50 93
+rect 84 59 100 93
+rect 34 17 100 59
+rect 290 191 306 225
+rect 340 191 356 225
+rect 290 157 356 191
+rect 290 123 306 157
+rect 340 123 356 157
+rect 290 89 356 123
+rect 290 55 306 89
+rect 340 55 356 89
+rect 290 17 356 55
+rect 0 -17 31 17
+rect 65 -17 127 17
+rect 161 -17 223 17
+rect 257 -17 319 17
+rect 353 -17 384 17
+<< viali >>
+rect 31 649 65 683
+rect 127 649 161 683
+rect 223 649 257 683
+rect 319 649 353 683
+rect 31 -17 65 17
+rect 127 -17 161 17
+rect 223 -17 257 17
+rect 319 -17 353 17
+<< metal1 >>
+rect 0 683 384 715
+rect 0 649 31 683
+rect 65 649 127 683
+rect 161 649 223 683
+rect 257 649 319 683
+rect 353 649 384 683
+rect 0 617 384 649
+rect 0 17 384 49
+rect 0 -17 31 17
+rect 65 -17 127 17
+rect 161 -17 223 17
+rect 257 -17 319 17
+rect 353 -17 384 17
+rect 0 -49 384 -17
+<< labels >>
+flabel pwell s 0 0 384 49 0 FreeSans 200 0 0 0 VNB
+port 2 nsew ground bidirectional
+flabel nwell s 0 617 384 666 0 FreeSans 200 0 0 0 VPB
+port 3 nsew power bidirectional
+rlabel comment s 0 0 0 0 4 decap_4
+flabel metal1 s 0 0 384 49 0 FreeSans 340 0 0 0 VGND
+port 1 nsew ground bidirectional
+flabel metal1 s 0 617 384 666 0 FreeSans 340 0 0 0 VPWR
+port 4 nsew power bidirectional
+<< properties >>
+string LEFsite unit
+string LEFclass CORE SPACER
+string FIXED_BBOX 0 0 384 666
+string GDS_FILE $PDKPATH/libs.ref/sky130_fd_sc_lp/gds/sky130_fd_sc_lp.gds
+string LEFsymmetry X Y R90
+string GDS_END 5956510
+string GDS_START 5953264
+<< end >>

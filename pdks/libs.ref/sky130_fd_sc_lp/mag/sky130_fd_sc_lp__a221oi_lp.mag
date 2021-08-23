@@ -1,0 +1,364 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1627202642
+<< checkpaint >>
+rect -1298 -1309 2066 1975
+<< nwell >>
+rect -38 331 806 704
+<< pwell >>
+rect 42 49 744 158
+rect 0 0 768 49
+<< scnmos >>
+rect 125 48 155 132
+rect 203 48 233 132
+rect 311 48 341 132
+rect 389 48 419 132
+rect 559 48 589 132
+rect 631 48 661 132
+<< scpmoshvt >>
+rect 113 412 163 612
+rect 219 412 269 612
+rect 383 412 433 612
+rect 489 412 539 612
+rect 595 412 645 612
+<< ndiff >>
+rect 68 107 125 132
+rect 68 73 80 107
+rect 114 73 125 107
+rect 68 48 125 73
+rect 155 48 203 132
+rect 233 111 311 132
+rect 233 77 266 111
+rect 300 77 311 111
+rect 233 48 311 77
+rect 341 48 389 132
+rect 419 94 559 132
+rect 419 60 430 94
+rect 464 60 559 94
+rect 419 48 559 60
+rect 589 48 631 132
+rect 661 111 718 132
+rect 661 77 672 111
+rect 706 77 718 111
+rect 661 48 718 77
+<< pdiff >>
+rect 56 597 113 612
+rect 56 563 68 597
+rect 102 563 113 597
+rect 56 527 113 563
+rect 56 493 68 527
+rect 102 493 113 527
+rect 56 458 113 493
+rect 56 424 68 458
+rect 102 424 113 458
+rect 56 412 113 424
+rect 163 566 219 612
+rect 163 532 174 566
+rect 208 532 219 566
+rect 163 412 219 532
+rect 269 595 383 612
+rect 269 561 280 595
+rect 314 561 383 595
+rect 269 412 383 561
+rect 433 566 489 612
+rect 433 532 444 566
+rect 478 532 489 566
+rect 433 412 489 532
+rect 539 597 595 612
+rect 539 563 550 597
+rect 584 563 595 597
+rect 539 466 595 563
+rect 539 432 550 466
+rect 584 432 595 466
+rect 539 412 595 432
+rect 645 597 702 612
+rect 645 563 656 597
+rect 690 563 702 597
+rect 645 527 702 563
+rect 645 493 656 527
+rect 690 493 702 527
+rect 645 458 702 493
+rect 645 424 656 458
+rect 690 424 702 458
+rect 645 412 702 424
+<< ndiffc >>
+rect 80 73 114 107
+rect 266 77 300 111
+rect 430 60 464 94
+rect 672 77 706 111
+<< pdiffc >>
+rect 68 563 102 597
+rect 68 493 102 527
+rect 68 424 102 458
+rect 174 532 208 566
+rect 280 561 314 595
+rect 444 532 478 566
+rect 550 563 584 597
+rect 550 432 584 466
+rect 656 563 690 597
+rect 656 493 690 527
+rect 656 424 690 458
+<< poly >>
+rect 113 612 163 638
+rect 219 612 269 638
+rect 383 612 433 638
+rect 489 612 539 638
+rect 595 612 645 638
+rect 113 356 163 412
+rect 219 380 269 412
+rect 77 340 163 356
+rect 77 306 93 340
+rect 127 326 163 340
+rect 211 364 341 380
+rect 211 330 227 364
+rect 261 330 341 364
+rect 127 306 143 326
+rect 211 314 341 330
+rect 383 314 433 412
+rect 489 380 539 412
+rect 475 364 541 380
+rect 475 330 491 364
+rect 525 330 541 364
+rect 595 356 645 412
+rect 475 314 541 330
+rect 589 340 655 356
+rect 77 272 143 306
+rect 77 238 93 272
+rect 127 252 143 272
+rect 127 238 155 252
+rect 77 222 155 238
+rect 125 132 155 222
+rect 203 250 269 266
+rect 203 216 219 250
+rect 253 216 269 250
+rect 203 200 269 216
+rect 203 132 233 200
+rect 311 132 341 314
+rect 403 266 433 314
+rect 589 306 605 340
+rect 639 306 655 340
+rect 589 272 655 306
+rect 389 250 455 266
+rect 589 252 605 272
+rect 389 216 405 250
+rect 439 216 455 250
+rect 389 200 455 216
+rect 559 238 605 252
+rect 639 252 655 272
+rect 639 238 661 252
+rect 559 222 661 238
+rect 389 132 419 200
+rect 559 132 589 222
+rect 631 132 661 222
+rect 125 22 155 48
+rect 203 22 233 48
+rect 311 22 341 48
+rect 389 22 419 48
+rect 559 22 589 48
+rect 631 22 661 48
+<< polycont >>
+rect 93 306 127 340
+rect 227 330 261 364
+rect 491 330 525 364
+rect 93 238 127 272
+rect 219 216 253 250
+rect 605 306 639 340
+rect 405 216 439 250
+rect 605 238 639 272
+<< locali >>
+rect 0 649 31 683
+rect 65 649 127 683
+rect 161 649 223 683
+rect 257 649 319 683
+rect 353 649 415 683
+rect 449 649 511 683
+rect 545 649 607 683
+rect 641 649 703 683
+rect 737 649 768 683
+rect 52 597 118 613
+rect 52 563 68 597
+rect 102 563 118 597
+rect 52 527 118 563
+rect 52 493 68 527
+rect 102 493 118 527
+rect 52 458 118 493
+rect 158 566 224 613
+rect 158 532 174 566
+rect 208 532 224 566
+rect 264 595 330 649
+rect 264 561 280 595
+rect 314 561 330 595
+rect 264 556 330 561
+rect 428 566 494 613
+rect 158 520 224 532
+rect 428 532 444 566
+rect 478 532 494 566
+rect 428 520 494 532
+rect 158 486 494 520
+rect 534 597 600 613
+rect 534 563 550 597
+rect 584 563 600 597
+rect 52 424 68 458
+rect 102 450 118 458
+rect 534 466 600 563
+rect 534 450 550 466
+rect 102 432 550 450
+rect 584 432 600 466
+rect 102 424 600 432
+rect 52 416 600 424
+rect 640 597 743 613
+rect 640 563 656 597
+rect 690 563 743 597
+rect 640 527 743 563
+rect 640 493 656 527
+rect 690 493 743 527
+rect 640 458 743 493
+rect 640 424 656 458
+rect 690 424 743 458
+rect 52 408 118 416
+rect 640 408 743 424
+rect 211 364 277 380
+rect 25 340 167 356
+rect 25 306 93 340
+rect 127 306 167 340
+rect 211 330 227 364
+rect 261 330 277 364
+rect 211 310 277 330
+rect 313 364 551 380
+rect 313 330 491 364
+rect 525 330 551 364
+rect 313 314 551 330
+rect 589 340 655 356
+rect 25 272 167 306
+rect 25 238 93 272
+rect 127 238 167 272
+rect 313 266 347 314
+rect 589 306 605 340
+rect 639 306 655 340
+rect 25 222 167 238
+rect 203 250 347 266
+rect 203 216 219 250
+rect 253 216 347 250
+rect 203 200 347 216
+rect 389 250 551 278
+rect 389 216 405 250
+rect 439 216 551 250
+rect 589 272 655 306
+rect 589 238 605 272
+rect 639 238 655 272
+rect 589 222 655 238
+rect 389 200 551 216
+rect 709 164 743 408
+rect 64 107 130 136
+rect 64 73 80 107
+rect 114 73 130 107
+rect 64 17 130 73
+rect 250 130 743 164
+rect 250 111 316 130
+rect 250 77 266 111
+rect 300 77 316 111
+rect 601 111 743 130
+rect 250 53 316 77
+rect 414 60 430 94
+rect 464 60 480 94
+rect 414 17 480 60
+rect 601 77 672 111
+rect 706 77 743 111
+rect 601 53 743 77
+rect 0 -17 31 17
+rect 65 -17 127 17
+rect 161 -17 223 17
+rect 257 -17 319 17
+rect 353 -17 415 17
+rect 449 -17 511 17
+rect 545 -17 607 17
+rect 641 -17 703 17
+rect 737 -17 768 17
+<< viali >>
+rect 31 649 65 683
+rect 127 649 161 683
+rect 223 649 257 683
+rect 319 649 353 683
+rect 415 649 449 683
+rect 511 649 545 683
+rect 607 649 641 683
+rect 703 649 737 683
+rect 31 -17 65 17
+rect 127 -17 161 17
+rect 223 -17 257 17
+rect 319 -17 353 17
+rect 415 -17 449 17
+rect 511 -17 545 17
+rect 607 -17 641 17
+rect 703 -17 737 17
+<< metal1 >>
+rect 0 683 768 715
+rect 0 649 31 683
+rect 65 649 127 683
+rect 161 649 223 683
+rect 257 649 319 683
+rect 353 649 415 683
+rect 449 649 511 683
+rect 545 649 607 683
+rect 641 649 703 683
+rect 737 649 768 683
+rect 0 617 768 649
+rect 0 17 768 49
+rect 0 -17 31 17
+rect 65 -17 127 17
+rect 161 -17 223 17
+rect 257 -17 319 17
+rect 353 -17 415 17
+rect 449 -17 511 17
+rect 545 -17 607 17
+rect 641 -17 703 17
+rect 737 -17 768 17
+rect 0 -49 768 -17
+<< labels >>
+flabel pwell s 0 0 768 49 0 FreeSans 200 0 0 0 VNB
+port 7 nsew ground bidirectional
+flabel nwell s 0 617 768 666 0 FreeSans 200 0 0 0 VPB
+port 8 nsew power bidirectional
+rlabel comment s 0 0 0 0 4 a221oi_lp
+flabel metal1 s 0 617 768 666 0 FreeSans 340 0 0 0 VPWR
+port 9 nsew power bidirectional
+flabel metal1 s 0 0 768 49 0 FreeSans 340 0 0 0 VGND
+port 6 nsew ground bidirectional
+flabel locali s 607 242 641 276 0 FreeSans 340 0 0 0 C1
+port 5 nsew signal input
+flabel locali s 607 316 641 350 0 FreeSans 340 0 0 0 C1
+port 5 nsew signal input
+flabel locali s 607 94 641 128 0 FreeSans 340 0 0 0 Y
+port 10 nsew signal output
+flabel locali s 703 94 737 128 0 FreeSans 340 0 0 0 Y
+port 10 nsew signal output
+flabel locali s 319 316 353 350 0 FreeSans 340 0 0 0 B1
+port 3 nsew signal input
+flabel locali s 415 316 449 350 0 FreeSans 340 0 0 0 B1
+port 3 nsew signal input
+flabel locali s 511 316 545 350 0 FreeSans 340 0 0 0 B1
+port 3 nsew signal input
+flabel locali s 415 242 449 276 0 FreeSans 340 0 0 0 A2
+port 2 nsew signal input
+flabel locali s 511 242 545 276 0 FreeSans 340 0 0 0 A2
+port 2 nsew signal input
+flabel locali s 223 316 257 350 0 FreeSans 340 0 0 0 A1
+port 1 nsew signal input
+flabel locali s 31 242 65 276 0 FreeSans 340 0 0 0 B2
+port 4 nsew signal input
+flabel locali s 31 316 65 350 0 FreeSans 340 0 0 0 B2
+port 4 nsew signal input
+flabel locali s 127 242 161 276 0 FreeSans 340 0 0 0 B2
+port 4 nsew signal input
+flabel locali s 127 316 161 350 0 FreeSans 340 0 0 0 B2
+port 4 nsew signal input
+<< properties >>
+string LEFsite unit
+string LEFclass CORE
+string FIXED_BBOX 0 0 768 666
+string GDS_FILE $PDKPATH/libs.ref/sky130_fd_sc_lp/gds/sky130_fd_sc_lp.gds
+string LEFsymmetry X Y R90
+string GDS_END 3960638
+string GDS_START 3953130
+<< end >>

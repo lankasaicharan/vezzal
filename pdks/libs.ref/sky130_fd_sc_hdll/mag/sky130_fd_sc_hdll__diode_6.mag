@@ -1,0 +1,124 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1627202621
+<< checkpaint >>
+rect -1298 -1308 1850 1852
+<< nwell >>
+rect -38 414 590 582
+rect -38 261 130 414
+rect 422 261 590 414
+<< pwell >>
+rect 187 203 365 357
+rect 1 13 551 203
+rect 29 -17 63 13
+<< ndiode >>
+rect 213 295 339 331
+rect 213 177 225 295
+rect 27 159 225 177
+rect 327 177 339 295
+rect 327 159 525 177
+rect 27 57 58 159
+rect 500 57 525 159
+rect 27 39 525 57
+<< ndiodec >>
+rect 225 159 327 295
+rect 58 57 500 159
+<< locali >>
+rect 0 527 29 561
+rect 63 527 121 561
+rect 155 527 213 561
+rect 247 527 305 561
+rect 339 527 397 561
+rect 431 527 489 561
+rect 523 527 552 561
+rect 17 295 535 493
+rect 17 159 225 295
+rect 327 159 535 295
+rect 17 57 58 159
+rect 500 57 535 159
+rect 17 51 535 57
+rect 0 -17 29 17
+rect 63 -17 121 17
+rect 155 -17 213 17
+rect 247 -17 305 17
+rect 339 -17 397 17
+rect 431 -17 489 17
+rect 523 -17 552 17
+<< viali >>
+rect 29 527 63 561
+rect 121 527 155 561
+rect 213 527 247 561
+rect 305 527 339 561
+rect 397 527 431 561
+rect 489 527 523 561
+rect 29 -17 63 17
+rect 121 -17 155 17
+rect 213 -17 247 17
+rect 305 -17 339 17
+rect 397 -17 431 17
+rect 489 -17 523 17
+<< metal1 >>
+rect 0 561 552 592
+rect 0 527 29 561
+rect 63 527 121 561
+rect 155 527 213 561
+rect 247 527 305 561
+rect 339 527 397 561
+rect 431 527 489 561
+rect 523 527 552 561
+rect 0 496 552 527
+rect 0 17 552 48
+rect 0 -17 29 17
+rect 63 -17 121 17
+rect 155 -17 213 17
+rect 247 -17 305 17
+rect 339 -17 397 17
+rect 431 -17 489 17
+rect 523 -17 552 17
+rect 0 -48 552 -17
+<< labels >>
+rlabel comment s 0 0 0 0 4 diode_6
+flabel pwell s 29 -17 63 17 0 FreeSans 200 0 0 0 VNB
+port 3 nsew ground bidirectional
+flabel nwell s 29 527 63 561 0 FreeSans 200 0 0 0 VPB
+port 4 nsew power bidirectional
+flabel metal1 s 29 -17 63 17 0 FreeSans 200 0 0 0 VGND
+port 2 nsew ground input
+flabel metal1 s 29 527 63 561 0 FreeSans 200 0 0 0 VPWR
+port 5 nsew power input
+flabel locali s 29 85 63 119 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 29 153 63 187 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 121 153 155 187 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 121 221 155 255 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 121 85 155 119 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 121 357 155 391 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 29 221 63 255 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 29 357 63 391 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 121 425 155 459 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 29 425 63 459 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 29 289 63 323 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+flabel locali s 121 289 155 323 0 FreeSans 200 0 0 0 DIODE
+port 1 nsew signal input
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string FIXED_BBOX 0 0 552 544
+string GDS_FILE $PDKPATH/libs.ref/sky130_fd_sc_hdll/gds/sky130_fd_sc_hdll.gds
+string LEFsymmetry X Y R90
+string GDS_END 3603704
+string GDS_START 3598642
+string LEFproperties maskLayoutSubType "abstract" prCellType "standard" originalViewName "layout"
+string path 0.000 13.600 13.800 13.600 
+<< end >>
