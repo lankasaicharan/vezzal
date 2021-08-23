@@ -4,7 +4,7 @@
 
 **CI is supported to below tools via Vezzal** - 
 * **Netgen -** ![](https://github.com/RtimothyEdwards/netgen/actions/workflows/main.yml/badge.svg)
-* **Magic -** (Yet) ![](https://github.com/RtimothyEdwards/magic/actions/workflows/main.yml/badge.svg)
+* **Magic -**  ![](https://github.com/lankasaicharan/magic/actions/workflows/main.yml/badge.svg)
 
 
 :warning: **This version of Vezzal needs code and testcases optimization.**
