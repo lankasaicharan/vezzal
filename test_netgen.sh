@@ -41,14 +41,14 @@ if [ $(netgen --version) ]; then
         then
                 echo "###################################"
 
-                python3 /vezzal/mail-report.py netgen Fail $1 $2
+                python3 /vezzal/mail-report.py netgen-Fail $1 $2
                 cd tl
 
         else
                 echo "***Passed***"
                 echo " "
                 echo "###################################"
-                python3 /vezzal/mail-report.py netgen Success $1 $2
+                python3 /vezzal/mail-report.py netgen-Success $1 $2
 		/vezzal/testcases/netgen/clean.sh
         fi
 else

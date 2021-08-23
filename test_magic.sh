@@ -21,7 +21,7 @@ echo ""
 
 
 #Configuring Vezzal with magic tool
-apt-get install tcsh > /dev/null 2>&1i
+apt-get install tcsh > /dev/null 2>&1
 cd /vezzal/tools/
 git clone https://github.com/RTimothyEdwards/magic.git > /dev/null 2>&1
 cd magic/
@@ -42,14 +42,14 @@ if [ $(magic --version) ]; then
         then
                 echo "###################################"
 
-                python3 /vezzal/mail-report.py magic Fail $1 $2
+                python3 /vezzal/mail-report.py magic-Fail $1 $2
                 cd tl
 
         else
                 echo "***Passed***"
                 echo " "
                 echo "###################################"
-                python3 /vezzal/mail-report.py magic Success $1 $2
+                python3 /vezzal/mail-report.py magic-Success $1 $2
 		/vezzal/testcases/magic/clean.sh
         fi
 else
