@@ -26,7 +26,7 @@ git clone https://github.com/RTimothyEdwards/netgen.git > /dev/null 2>&1
 cd netgen/
 ./configure && make > /dev/null 2>&1
 make install > /dev/null 2>&1
-if [ $(netgen --version) ]; then
+if [ $(which netgen) ]; then
 	cd /vezzal/testcases/netgen/
         for i in $(find -type d -maxdepth 1)
         do
