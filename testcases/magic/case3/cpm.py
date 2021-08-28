@@ -35,7 +35,6 @@ for i in f4:
 for i in t:
     if i not in u:
         print("Failed")
-        exit
 print("Success")
 
 f1.close()

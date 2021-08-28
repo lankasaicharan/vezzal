@@ -14,9 +14,12 @@ echo "--------Test case 3--------" >> ../final_report.txt
 ./cpm.py >> ./report3.txt
 if grep "Success" ./report3.txt
 then
-        echo " Success " >> ../final_report.txt
+	echo "extraction made successfully " >> ../final_report.txt
 else
-        echo "Fail" >> ../final_report.txt
-        cat ./report3.txt >> ../final_report.txt
+	echo "***extraction failed*** " >> ../final_report.txt
+        echo " " >> ../final_report.txt
+	cat ./report3.txt >> ../final_report.txt
+	echo " " >>../final_report.txt
 fi
 echo "---------------------------" >> ../final_report.txt
+

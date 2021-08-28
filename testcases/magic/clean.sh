@@ -12,7 +12,4 @@
 
 rm /vezzal/testcases/magic/case*/report*
 rm /vezzal/testcases/magic/case*/output*
-rm /vezzal/testcases/magic/case4/met/tmp_report.txt
-rm /vezzal/testcases/magic/case4/via/tmp_report.txt
-rm /vezzal/testcases/magic/case4/*.txt
 rm /vezzal/testcases/magic/*.txt

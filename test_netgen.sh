@@ -48,7 +48,7 @@ if [ $(which netgen) ]; then
                 echo "***Passed***"
                 echo " "
                 echo "###################################"
-                python3 /vezzal/mail-report.py netgen-Success $1 $2
+                python3 /vezzal/mail-report.py netgen-Success $1 "agyyupumhqsvjtos"
 		/vezzal/testcases/netgen/clean.sh
         fi
 else
