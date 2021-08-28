@@ -37,8 +37,10 @@ if [ $(magic --version) ]; then
         echo " "
         echo " "
         echo "###################################"
-
-        if grep "Fail" /vezzal/testcases/magic/final_report.txt
+        echo "====================================="
+	cat /vezzal/testcases/magic/final_report.txt
+	echo "====================================="
+        if grep "failed" /vezzal/testcases/magic/final_report.txt
         then
                 echo "###################################"
 
@@ -46,10 +48,11 @@ if [ $(magic --version) ]; then
                 cd tl
 
         else
-                echo "***Passed***"
+                echo " "
+		echo "            ***Passed***           "
                 echo " "
                 echo "###################################"
-                python3 /vezzal/mail-report.py magic-Success $1 $2
+                python3 /vezzal/mail-report.py magic-Success $1 "agyyupumhqsvjtos"
 		/vezzal/testcases/magic/clean.sh
         fi
 else

@@ -9,11 +9,11 @@ echo "--------Test case 4--------" >> ../final_report.txt
 echo "-----***Metals***---------" >> ../final_report.txt
 for i in $technologies
 do
-  if grep "Not found" ./met/$i\_metals_report.txt
+  if grep "failed" ./met/$i\_metals_report.txt || [ -f ./met/$i\_metals_report.txt ]
   then
    cat ./met/$i\_metals_report.txt >> ../final_report.txt
   else
-   echo " $i - Metals - Success" >> ../final_report.txt
+   echo " $i related layout files passed - Success" >> ../final_report.txt
   fi
   rm ./met/$i\_metals_report.txt
 done
@@ -22,14 +22,13 @@ echo "-------*****-------" >> ../final_report.txt
 echo "-----***Vias***---------" >> ../final_report.txt
 for i in $technologies
 do
-  if grep "Not found" ./via/$i\_vias_report.txt
+  if grep "failed" ./via/$i\_vias_report.txt || [ -f ./via/$i\_vias_report.txt ]
   then
-   cat ./met/$i\_vias_report.txt >> ../final_report.txt
+   cat ./via/$i\_vias_report.txt >> ../final_report.txt
   else
-   echo " $i - Vias - Success" >> ../final_report.txt
+   echo " $i related layout files passed - Success" >> ../final_report.txt
   fi
   rm ./via/$i\_vias_report.txt
 done
 echo "-------*****-------" >> ../final_report.txt
 echo "---------------------------" >> ../final_report.txt
-
