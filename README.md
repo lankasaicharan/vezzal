@@ -91,8 +91,12 @@ Below is the list of test cases for Netgen which are tested in Vezzal -
 
 
 #### Magic
-
-**To be updated**
+| Testcases                          | Feature                                                | Result |
+|------------------------------------|--------------------------------------------------------|--------|
+| testcase1 - result.txt testing.sh  |Testing gds read option                                   |Success |
+| testcase2 - result.txt testing.sh  |Testing lef read option                                 |Success |
+| testcase3 - cmp.py, testing.sh, testing version of spice netlist |Testing the extraction feature |Success |
+| testcase4 - met, via  |Testing drc checking feature of magic. Currently tests with sky130A technology based rules. Another set of open PDKs will be added soon|Success |
 
 ## Github Actions
 
