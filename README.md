@@ -2,6 +2,8 @@
 
 ![Countinous Integration](https://github.com/lankasaicharan/vezzal/actions/workflows/codeql-analysis.yml/badge.svg)
 
+🤝 Help needed to improve Vezzal. Please feel free do to a pull request to improve the coding. There is a huge scope for it.
+
 **CI is supported to below tools via Vezzal** - 
 * **Netgen -** ![](https://github.com/RtimothyEdwards/netgen/actions/workflows/main.yml/badge.svg)
 * **Magic -**  ![](https://github.com/RtimothyEdwards/magic/actions/workflows/main.yml/badge.svg)
@@ -11,7 +13,10 @@
 
 Vezzal is a CI tool currrently supporting Netgen and Magic. This tool is a docker image which has an environment containing all tool dependencies such as libraries and PDK. The latest version of the specific tool is tested against a pre-built test cases database covering core features of that tool and generates a report which can be retrieved using the Vezzal's built-in mailing feature. It takes the advantage of Github actions and the docker technology for continuous integration of tools that are already stored in the github repo.
 
-Vezzal docker image - https://hub.docker.com/r/vezzal/vezzal
+**Vezzal docker image - https://hub.docker.com/r/vezzal/vezzal**
+
+* **vezzal:v1 is used for testing purposes.**
+* **vezzal:v0 is used for general tool usage purposes.**
 
 ## Table of Contents
 
@@ -40,7 +45,6 @@ Vezzal docker image - https://hub.docker.com/r/vezzal/vezzal
 ## Philosophy
 
 Constant development of tools often breaks something internally which can lead to other issues. Hence there is a need to test the tool for its previous supporting features. But the tool needs an environment to work and good test cases to test the features. That's where Vezzal comes in. The main goal of Vezzal is to provide the tool an environment supporting all dependencies like compilers, libraries etc., and a test cases database which could test the tool its core and supporting features with very few inputs from the user. It can also be used as a standalone environment to work with and exercise opensource EDA tools by using the test cases database as examples to practice. However, this feature needs few modification to the current version but a good understanding of Vezzal can help you to achieve it. In addition to the main goal, authors of Vezzal tries to keep everything simple by following the KISS principle (KEEP IT SIMPLE, STUPID) to avoid any kind of usage restrictions, giving complete freedom to mould Vezzal according to the needs of the user. The CI feature offered by Vezzal couldn't be possible without the docker technology, which is also employed by the OpenLANE, and Github Actions.
-
 
 
 ## Vezzal Tool
