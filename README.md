@@ -1,7 +1,5 @@
 # Vezzal
 
-![Countinous Integration](https://github.com/lankasaicharan/vezzal/actions/workflows/codeql-analysis.yml/badge.svg)
-
 🤝 Help needed to improve Vezzal. Please feel free do to a pull request to improve the coding. There is a huge scope for it.
 
 **CI is supported to below tools via Vezzal** - 
