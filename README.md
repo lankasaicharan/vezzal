@@ -13,16 +13,20 @@ Vezzal is a tool currrently supporting CI for Netgen and Magic. This tool is a d
 
 **Vezzal docker image - https://hub.docker.com/r/vezzal/vezzal**
 
-* **vezzal:v1 is used for testing purposes.**
-* **vezzal:v0 is used for general tool usage purposes.**
+* **vezzal:v1 is used for testing purposes.(Test mode)**
+* **vezzal:v0 is used for general tool usage purposes.(User mode)**
 
 ## Table of Contents
 
-* [**Philosophy**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#philosophy)
+* [**Philosophy**](https://github.com/lankasaicharan/vezzal/#philosophy)
 
-* [**Vezzal Tool**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#vezzal-tool)
+* [**Vezzal Tool**](https://github.com/lankasaicharan/vezzal/#vezzal-tool)
 
-  > [**Directory Structure**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#directory-structure)
+* [**User Mode**](https://github.com/lankasaicharan/vezzal/#user-mode)
+
+* [**Test Mode**](https://github.com/lankasaicharan/vezzal/#test-mode)
+
+  > [**Directory Structure**](https://github.com/lankasaicharan/vezzal/#directory-structure)
   
   > [**Scripts**](https://github.com/lankasaicharan/vezzal#scripts)
   
@@ -30,11 +34,11 @@ Vezzal is a tool currrently supporting CI for Netgen and Magic. This tool is a d
 
 * [**Github Actions**](https://github.com/lankasaicharan/vezzal#github-actions)
 
-  > [**Building the .yml file**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#building-the-yml-file)
+  > [**Building the .yml file**](https://github.com/lankasaicharan/vezzal/#building-the-yml-file)
 
-* [**Continuous Integration workflow using Github actions and Vezzal**](https://github.com/lankasaicharan/vezzal/blob/main/README.md#day-4-pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+* [**Continuous Integration workflow using Github actions and Vezzal**](https://github.com/lankasaicharan/vezzal/#day-4-pre-layout-timing-analysis-and-importance-of-good-clock-tree)
 
-* [**Authors**](https://github.com/lankasaicharan/vezzal/blob/master/README.md#authors)
+* [**Authors**](https://github.com/lankasaicharan/vezzal/#authors)
 
 * [**Acknowledgments**](https://github.com/lankasaicharan/vezzal#acknowledgments)
 
@@ -47,11 +51,27 @@ Constant development of tools often breaks something internally which can lead t
 
 ## Vezzal Tool
 
-Vezzal is in the form of docker image (as of now) which has the environment to support current open-source EDA tools like Netgen, Magic etc. It includes dependencies such as tcl/tk, gcc, python3, git and many more libraries. The image also includes a test cases database, which is mainly used for CI to tools but can also be used for other misc purposes. Vezzal also comes with individual tool testing scripts and also with a mailing feature to report the result of CI. However, Vezzal tried to keep everything simple and light-weight hence PDKs are installed with only necessary content. The simplicity of Vezzal can also be seen in its structure leaving no obstructions for the user to understand what he/she is doing.
+Vezzal is in the form of docker image (as of now) which has the environment to support current open-source EDA tools like Netgen, Magic etc. It includes dependencies such as tcl/tk, gcc, python3, git and many more libraries. 
 
 ![Vezzal](https://github.com/lankasaicharan/vezzal/blob/master/Images/Vezzal.png)
 
-### **Directory Structure**
+### User mode
+Vezzal can be used in User mode which is nothing but containerizing the EDA tools without bothering about the dependecies installation on your system. Currently, Vezzal can be used to run Netgen and Magic. Since Magic needs to be used in GUI mode (for more functionalities), the docker container must be run by using the local Xserver which is available for every linux desktop environment. Vezzal can be started using - 
+```
+docker run -it --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" vezzal/vezzal:v0 bash
+```
+This will run the vezzal container with an interactive terminal.
+
+Internally, there is a make file which helps to install, uninstall and update desired tools and PDK.
+```
+make [[clean_/update_]netgen/magic/xschem/sky130a_pdks]
+```
+
+### Test mode
+The image also includes a test cases database, which is mainly used for CI to tools but can also be used for other misc purposes. Vezzal also comes with individual tool testing scripts and also with a mailing feature to report the result of CI. However, Vezzal tried to keep everything simple and light-weight hence PDKs are installed with only necessary content. The simplicity of Vezzal can also be seen in its structure leaving no obstructions for the user to understand what he/she is doing.
+
+
+#### **Directory Structure**
 
 The directory named *vezzal* serves as the *home* directory to the tool. It consists of two main directories - *testcases* and *tools*. Tool dependent testcases are stored under the *testcases* directory. All tool installations happen in the *tools* directory. There are two scripts - *test_netgen.sh* and *mail-report.py* which tests the netgen tool and mails the final result to provided mail addresses, respectively.
 
@@ -63,7 +83,7 @@ Details related to testcases are mentioned in furthur sections.
 
 ![Directory Structure](https://github.com/lankasaicharan/vezzal/blob/master/Images/internal%20directory.png)
 
-### **Scripts**
+#### **Scripts**
 
 **Vezzal** contains shell scripts which are written for a particular tool, mainly to support testing. Scripts can be identified in two categories. One master script which performs the testing of the tool and many test case related scripts which does the actual testing by communicating with the tool in various fashions. Consider the example of Netgen. There is a master script called *test_netgen.sh* which does the testing of the tool by interacting with various shell scripts present in the each test case directory. (This will be invoked directly with the docker image while performing CI through Github actions.)
 There are two arguments to this shell script - list of mail IDs and the passcode for *vezzal mail ID*. Both of them are used for mailing purposes (as you could see that already).
@@ -72,14 +92,14 @@ Each testcase directory contains custom shell script which invokes the tool and 
 
 There is a python script in the *vezzal* directory (home) which mails the final result to the mails IDs mentioned during the launching of testing operation.
 
-### **Testcases**
+#### **Testcases**
 
 Testcases are designed to test the core features of a particular tool. Under the *testcases* directory, there are sub-directories with name of the tool which contains all the test cases. Each testcase is named as *case#*. This *case#* directory contains required files such as spice netlists, verilog files, lef files, def files, .mag files, dependent files and shell scripts which invoke the tool in various fashions.
 Reports are generated after each case testing and are analyzed to identify the result.
 
 Below is the list of test cases for Netgen which are tested in Vezzal -
 
-#### Netgen
+##### Netgen
 
 | Testcases                          | Feature                                                | Result |
 |------------------------------------|--------------------------------------------------------|--------|
@@ -92,7 +112,7 @@ Below is the list of test cases for Netgen which are tested in Vezzal -
 | testcase7 - netA.spice netB.spice  |should able to find the properties difference between magic extracted spice netlist and xschem extracted spice netlist         |   Property errors = 6     |
 
 
-#### Magic
+##### Magic
 | Testcases                          | Feature                                                | Result |
 |------------------------------------|--------------------------------------------------------|--------|
 | testcase1 - result.txt testing.sh  |Testing gds read option                                   |Success |
