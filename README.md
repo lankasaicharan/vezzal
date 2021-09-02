@@ -16,6 +16,7 @@ Vezzal is a tool currrently supporting CI for Netgen and Magic. This tool is a d
 * **vezzal:v1 is used for testing purposes.(Test mode)**
 * **vezzal:v0 is used for general tool usage purposes.(User mode)**
 
+
 ## Table of Contents
 
 * [**Philosophy**](https://github.com/lankasaicharan/vezzal/#philosophy)
@@ -113,6 +114,7 @@ Below is the list of test cases for Netgen which are tested in Vezzal -
 
 
 ##### Magic
+
 | Testcases                          | Feature                                                | Result |
 |------------------------------------|--------------------------------------------------------|--------|
 | testcase1 - result.txt testing.sh  |Testing gds read option                                   |Success |
@@ -145,6 +147,7 @@ The updated tool's Github repo is pulled into the Vezzal environment and the too
 ## Authors
 
 **Vezzal** is designed and developed by **Sai Charan Lanka** who currently works as an EDA CAD intern at **onsemi**, India.
+Help is taken from **Tim Edwards** for building the testcases database. 
 
 ## Acknowledgments
 
