@@ -1,6 +1,6 @@
 # Vezzal 
 
-### **(made-up name from "vessel" indicating that this tool is a container containing most of the library dependencies and PDK info for the EDA tools it supports)**
+**(made-up name from "vessel" indicating that this tool is a container having most of the library dependencies and PDK info for the EDA tools it supports)**
 
 🤝 Help needed to improve Vezzal. Please feel free do to a pull request to improve the coding. There is a huge scope for it.
 
@@ -8,12 +8,11 @@
 * **Netgen -** ![](https://github.com/RtimothyEdwards/netgen/actions/workflows/main.yml/badge.svg)
 * **Magic -**  ![](https://github.com/RtimothyEdwards/magic/actions/workflows/main.yml/badge.svg)
 
-**Available tools that can be used in user mode*
+**Available tools that can be used in user mode**
 * **Netgen**
 * **Magic**
-* Xschem
-* PDK
-* ...
+* xschem (in progress)
+* PDK (in progress)
 
 :warning: **This version of Vezzal needs code and testcases optimization.**
 
