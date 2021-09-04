@@ -148,7 +148,7 @@ The updated tool's Github repo is pulled into the Vezzal environment and the too
 ## Authors
 
 **Vezzal** is designed and developed by **Sai Charan Lanka** who currently works as an EDA CAD intern at **onsemi**, India.
-Help is taken from **Tim Edwards** for building the testcases database. 
+A huge thanks to **Tim Edwards** for helping in building the testcases database and providing a constant feedback for the tool's foundation.
 
 ## Acknowledgments
 
