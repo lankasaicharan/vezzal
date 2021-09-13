@@ -84,8 +84,6 @@ The image also includes a test cases database, which is mainly used for CI to to
 
 The directory named *vezzal* serves as the *home* directory to the tool. It consists of two main directories - *testcases* and *tools*. Tool dependent testcases are stored under the *testcases* directory. All tool installations happen in the *tools* directory. There are two scripts - *test_netgen.sh* and *mail-report.py* which tests the netgen tool and mails the final result to provided mail addresses, respectively.
 
-*Please note that currently **Vezzal** is configured for Netgen tool, hence the mailing python script is configured to Netgen related directory.*  
-
 Under the testcases directory, there are directories which contain scripts and testcases for each individual tool. Currently, **Vezzal** contains testcases and supporting scripts, only for Netgen tool. Similar content will be added for Magic tool very soon. There is a complete freedom to update the testcases, however the present testcases tests the opensource EDA tools for some of their core features.  
 
 Details related to testcases are mentioned in furthur sections.
