@@ -21,7 +21,7 @@ Vezzal is a tool currrently supporting CI for Netgen and Magic. This tool is a d
 **Vezzal docker image - https://hub.docker.com/r/vezzal/vezzal**
 
 * **vezzal:v1 is used for testing purposes.(Test mode)**
-* **vezzal:v0 is used for general tool usage purposes.(User mode)**
+* **vezzal:v2 is used for general tool usage purposes.(User mode)**
 
 
 ## Table of Contents
@@ -66,7 +66,7 @@ Vezzal is in the form of docker image (as of now) which has the environment to s
 ### User mode
 Vezzal can be used in User mode which is nothing but containerizing the EDA tools without bothering about the dependecies installation on your system. Currently, Vezzal can be used to run Netgen and Magic. Since Magic needs to be used in GUI mode (for more functionalities), the docker container must be run by using the local Xserver which is available for every linux desktop environment. Vezzal can be started using - 
 ```
-docker run -it --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" vezzal/vezzal:v0 bash
+docker run -it --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" vezzal/vezzal:v2 bash
 ```
 This will run the vezzal container with an interactive terminal.
 
